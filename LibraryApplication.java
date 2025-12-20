@@ -42,7 +42,7 @@ public class LibraryApplication {
 
 	private User user;
 	private Library library;
-	private Loan loan;
+	//private Loan loan;
 
 	// Use one Scanner shared across the program
 	private static final Scanner SCANNER = new Scanner(System.in);
@@ -84,13 +84,14 @@ public class LibraryApplication {
 				library.displayAllAvailableBooks();
 				break;
 			case "3":
-				System.out.println("[3] Display All Borrowed Books  ");
+
 				library.displayAllBorrowedBooks();
 				break;
 			case "4":
 				System.out.println("Borrowing book");
 				System.out.println("Please enter book ID");
 				String input3 = SCANNER.nextLine();
+				
 
 				int userInput3 = Integer.parseInt(input3); // read input and convert to integer
 				// System.out.println("**Investigation");
@@ -119,6 +120,10 @@ public class LibraryApplication {
 				System.out.println("Please enter book ID");
 				String input5 = SCANNER.nextLine();
 				int userInput5 = Integer.parseInt(input5);
+				
+				if (library.checkBookID(userInput5)) {
+					break;
+				}
 
 				System.out.println("Please enter book Title");
 				String input6 = SCANNER.nextLine();
@@ -127,37 +132,50 @@ public class LibraryApplication {
 				String input7 = SCANNER.nextLine();
 
 				library.addNewBooks(userInput5, input6, input7);
-				
+
 				break;
 			case "7":
 				System.out.println("Remove book");
 				System.out.println("Please enter book ID");
 				String input8 = SCANNER.nextLine();
 				int userInput8 = Integer.parseInt(input8);
-				
+
 				library.removeBook(user, userInput8);
-				
-				
+
 				break;
-				
+
 			case "8":
 				System.out.println("Update book");
 				System.out.println("Please enter book ID");
 				String input9 = SCANNER.nextLine();
 				int userInput9 = Integer.parseInt(input9);
 				
+				if (!library.checkBookID(userInput9)) {
+					break;
+				}
+				
 				System.out.println("Please enter book Title");
 				String input10 = SCANNER.nextLine();
 
 				System.out.println("Please enter book Author");
 				String input11 = SCANNER.nextLine();
-				
-				library.updateBook(userInput9, input10, input11);				
-				
-				break;	
+
+				library.updateBook(userInput9, input10, input11);
+
+				break;
 
 			case "0":
-				System.out.println("[0] Exit                        ");
+				System.out.println("Exiting.........                ");
+
+				for (int i = 0; i <= 100; i++) {
+					System.out.println();
+				}
+				System.out.println("Thank you for using     ");
+				System.out.println("The Enhanced Library System!");
+				for (int i = 0; i <= 20; i++) {
+					System.out.println();
+				}
+				System.out.println("Program terminated!             ");
 				break;
 			default:
 				System.out.println("Invalid Choice. Please choose from 1, 2, 3, 4, 5, 6, 7, 8, 0. Thank you");
@@ -182,17 +200,22 @@ public class LibraryApplication {
 	}
 
 	private static MenuChoice mainMenu() {
-		System.out.println("===== GROUP 9 LIBRARY SYSTEM =====");
-		System.out.println("[1] Display All Books             ");
-		System.out.println("[2] Display Available Books       ");
-		System.out.println("[3] Display All Borrowed Books    ");
-		System.out.println("[4] Borrow Book                   ");
-		System.out.println("[5] Return Book                   ");
-		System.out.println("[6] Add Book                      ");
-		System.out.println("[7] Remove Book                   ");
-		System.out.println("[8] Update Book                   ");
-		System.out.println("[0] Exit                          ");
-		System.out.println("==================================");
+		System.out.println("Press Enter to go to main menu.");
+		String main = SCANNER.nextLine();
+		
+		System.out.println("=========================================================");
+		System.out.println("|                ENHANCED LIBRARY SYSTEM                |");
+		System.out.println("+-------------------------------------------------------+");
+		System.out.println("|[1] Display All Books                                  |");
+		System.out.println("|[2] Display Available Books                            |");
+		System.out.println("|[3] Display All Borrowed Books                         |");
+		System.out.println("|[4] Borrow Book                                        |");
+		System.out.println("|[5] Return Book                                        |");
+		System.out.println("|[6] Add Book                                           |");
+		System.out.println("|[7] Remove Book                                        |");
+		System.out.println("|[8] Update Book                                        |");
+		System.out.println("|[0] Exit                                               |");
+		System.out.println("=========================================================");
 		System.out.print("Enter Choice:                     ");
 
 		String userChoice = SCANNER.nextLine();
