@@ -57,9 +57,16 @@ public class LibraryApplication {
 
 		int userInput1 = Integer.parseInt(input1); // read input and convert to integer
 		// for user ID
-
-		System.out.println("Please enter your user name #");
-		String input2 = SCANNER.nextLine();
+		
+		String input2;
+		do {
+			System.out.println("Please enter your user name.");
+			input2 = SCANNER.nextLine();
+			if(input2 == null || input2.trim().isEmpty()) {
+				System.out.println("User is null or empty");
+				
+			}
+		} while (input2 == null || input2.trim().isEmpty());
 
 		// for user name
 		user.setUser(userInput1, input2);
@@ -104,7 +111,7 @@ public class LibraryApplication {
 			case "5":
 
 				System.out.println("Returning book");
-				System.out.println("Please enter book ID");
+				System.out.println("Please enter book ID");				
 				String input4 = SCANNER.nextLine();
 
 				int userInput4 = Integer.parseInt(input4); // read input and convert to integer
@@ -117,11 +124,14 @@ public class LibraryApplication {
 
 			case "6":
 				System.out.println("Adding book");
-				System.out.println("Please enter book ID");
+				System.out.println("Assign a number for book ID");
 				String input5 = SCANNER.nextLine();
 				int userInput5 = Integer.parseInt(input5);
 				
 				if (library.checkBookID(userInput5)) {
+					System.out.println("Conflict with existing book ID. \n");
+					
+					System.out.println("Either assign a new book ID \nor update the existing \n");
 					break;
 				}
 
@@ -151,6 +161,7 @@ public class LibraryApplication {
 				int userInput9 = Integer.parseInt(input9);
 				
 				if (!library.checkBookID(userInput9)) {
+					System.out.println("If this is new book ID, please choose add option in main menu \n");
 					break;
 				}
 				
@@ -200,8 +211,8 @@ public class LibraryApplication {
 	}
 
 	private static MenuChoice mainMenu() {
-		System.out.println("Press Enter to go to main menu.");
-		String main = SCANNER.nextLine();
+		System.out.println("Press \"Enter\" to go to main menu.");
+		SCANNER.nextLine();
 		
 		System.out.println("=========================================================");
 		System.out.println("|                ENHANCED LIBRARY SYSTEM                |");
