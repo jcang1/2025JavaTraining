@@ -1,0 +1,26 @@
+2026-01-20 11:38:42.614 [INFO] c.m.a.service.BankAccountService - Creating account for owner 
+2026-01-20 11:38:42.622 [INFO] c.m.a.service.BankAccountService - Account ACC001 created successfully for John Doe 
+2026-01-20 11:38:42.623 [INFO] c.m.a.service.BankAccountService - Creating account for owner 
+2026-01-20 11:38:42.623 [INFO] c.m.a.service.BankAccountService - Account ACC002 created successfully for Jane Smith 
+2026-01-20 11:38:42.624 [INFO] c.m.a.service.BankAccountService - Transfer request: ACC001 -> ACC002, amount: 3000.0
+2026-01-20 11:38:42.625 [INFO] c.m.a.service.BankAccountService - Transfer successful: ACC001 -> ACC002, amount: 3000.0
+2026-01-20 11:38:42.626 [INFO] c.m.a.service.BankAccountService - Transfer request: ACC001 -> ACC999, amount: 1000.0
+2026-01-20 11:38:42.629 [WARN] c.m.a.service.BankAccountService - Transfer failed: destination account ACC999 not found 
+2026-01-20 11:38:42.630 [INFO] c.m.a.service.BankAccountService - Transfer request: ACC001 -> ACC002, amount: -500.0
+2026-01-20 11:38:42.630 [WARN] c.m.a.service.BankAccountService - Transfer failed: invalid amount -500.0
+2026-01-20 11:38:42.634 [INFO] c.m.a.service.BankAccountService - Transfer request: ACC001 -> ACC001, amount: 1000.0
+2026-01-20 11:38:42.636 [WARN] c.m.a.service.BankAccountService - Transfer failed: same source and destination account ACC001
+2026-01-20 11:38:42.637 [INFO] c.m.a.service.BankAccountService - Transfer request: ACC999 -> ACC002, amount: 1000.0
+2026-01-20 11:38:42.638 [WARN] c.m.a.service.BankAccountService - Transfer failed: source account ACC999 not found
+2026-01-20 11:38:42.639 [INFO] c.m.a.service.BankAccountService - Transfer request: ACC002 -> ACC001, amount: 50000.0
+2026-01-20 11:38:42.639 [WARN] c.m.a.service.BankAccountService - Transfer failed: insufficient funds in account {}.
+2026-01-20 11:38:42.639 [WARN] c.m.a.service.BankAccountService - Balance: {}, Required: {}
+2026-01-20 11:38:42.639 [WARN] c.m.a.service.BankAccountService - ACC002
+2026-01-20 11:38:42.640 [INFO] c.m.a.service.BankAccountService - Creating account for owner 
+2026-01-20 11:38:42.640 [WARN] c.m.a.service.BankAccountService - Account creation failed: account {} already exists
+2026-01-20 11:38:42.640 [INFO] c.m.a.service.BankAccountService - Creating account for owner 
+2026-01-20 11:38:42.640 [WARN] c.m.a.service.BankAccountService - Account creation failed: account number is null or empty
+2026-01-20 11:38:42.641 [INFO] c.m.a.service.BankAccountService - Creating account for owner 
+2026-01-20 11:38:42.641 [WARN] c.m.a.service.BankAccountService - Account creation failed: owner name is null or empty
+2026-01-20 11:38:42.641 [INFO] c.m.a.service.BankAccountService - Creating account for owner 
+2026-01-20 11:38:42.641 [WARN] c.m.a.service.BankAccountService - Account creation failed: invalid initial balance -1000.0
