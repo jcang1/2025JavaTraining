@@ -1,0 +1,3 @@
+com\bpi\module6\model\Course.class
+com\bpi\module6\model\Student.class
+com\bpi\module6\util\EntityManagerUtil.class
