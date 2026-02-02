@@ -11,34 +11,40 @@ import jakarta.persistence.EntityManager;
 import jakarta.persistence.TypedQuery;
 
 public class App {
+	private static EntityManager em = EntityManagerUtil.getInstance().createEntityManager();
+	
 	public static void main(String[] args) {
-		EntityManager em = EntityManagerUtil.getInstance().createEntityManager();
+		//EntityManager em = EntityManagerUtil.getInstance().createEntityManager();
 
 		try {
 			// runM6Activity3(em);
 			System.out.println("Executing findStudentNames");
-			findStudentNames(em);
+			findStudentNames();
 			System.out.println("Done Executing findStudentNames");
 
 			System.out.println("\nExecuting countCoursesByStudentId");
 			Long id = Long.parseLong("18");
-			countCoursesByStudentId(em, id);
+			countCoursesByStudentId(id);
 			System.out.println("Done Executing countCoursesByStudentId");
 
-			System.out.println("\nfindStudentsByAgeGreaterThan");
-			findStudentsByAgeGreaterThan(em, 20);
-			System.out.println("Done findStudentsByAgeGreaterThan");
-		} finally {
+			System.out.println("\n Executing findStudentsByAgeGreaterThan");
+			findStudentsByAgeGreaterThan(20);
+			System.out.println("Done executing findStudentsByAgeGreaterThan");
+		}catch(Exception e) {
+			e.printStackTrace();
+		}
+		finally {
 			EntityManagerUtil.getInstance().closeEntityManager(em);
 			EntityManagerUtil.getInstance().shutdownFactory();
 
 		}
 	}
-
-	static void findStudentNames(EntityManager em) {
+	
+	static void findStudentNames() {
 		em.getTransaction().begin();
 
 		String jpql = "Select s FROM Student s";
+	
 		TypedQuery<Student> query = em.createQuery(jpql, Student.class);
 		List<Student> students = query.getResultList();
 
@@ -49,7 +55,7 @@ public class App {
 
 	}
 
-	static void countCoursesByStudentId(EntityManager em, Long id) {
+	static void countCoursesByStudentId(Long id) {
 		em.getTransaction().begin();
 
 		String jpql = "Select count(c) from Course c Where c.student.id = ?1";
@@ -60,7 +66,7 @@ public class App {
 		em.getTransaction().commit();
 	}
 
-	static void findStudentsByAgeGreaterThan(EntityManager em, int age) {
+	static void findStudentsByAgeGreaterThan(int age) {
 		em.getTransaction().begin();
 
 		String jpql = "Select count(s) FROM Student s where s.age > ?1";
