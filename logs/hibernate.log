@@ -1,0 +1,294 @@
+2026-02-15 21:06:11.699 INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-02-15 21:06:11.737 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 7.1.11.Final
+2026-02-15 21:06:12.015 WARN  org.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2026-02-15 21:06:12.293 WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-02-15 21:06:12.315 INFO  org.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://127.0.0.1:5432/training_db]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 18.1
+	Default catalog/schema: training_db/public
+	Autocommit mode: false
+	Isolation level: READ_COMMITTED
+	JDBC fetch size: none
+	Pool: DriverManagerConnectionProviderImpl
+	Minimum pool size: 1
+	Maximum pool size: 20
+2026-02-15 21:06:13.345 INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-02-15 21:06:17.278 DEBUG org.hibernate.SQL - 
+    [34mselect[0m
+        b1_0.id,
+        b1_0.author,
+        b1_0.is_available,
+        b1_0.title 
+    [34mfrom[0m
+        books b1_0 
+    [34mwhere[0m
+        b1_0.id=?
+2026-02-15 21:11:57.127 INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-02-15 21:11:57.163 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 7.1.11.Final
+2026-02-15 21:11:57.454 WARN  org.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2026-02-15 21:11:57.747 WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-02-15 21:11:57.766 INFO  org.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://127.0.0.1:5432/training_db]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 18.1
+	Default catalog/schema: training_db/public
+	Autocommit mode: false
+	Isolation level: READ_COMMITTED
+	JDBC fetch size: none
+	Pool: DriverManagerConnectionProviderImpl
+	Minimum pool size: 1
+	Maximum pool size: 20
+2026-02-15 21:11:58.673 INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-02-15 21:12:01.919 DEBUG org.hibernate.SQL - 
+    [34mselect[0m
+        b1_0.id,
+        b1_0.author,
+        b1_0.is_available,
+        b1_0.title 
+    [34mfrom[0m
+        books b1_0 
+    [34mwhere[0m
+        b1_0.id=?
+2026-02-15 21:12:09.241 DEBUG org.hibernate.SQL - 
+    [34mselect[0m
+        b1_0.id,
+        b1_0.author,
+        b1_0.is_available,
+        b1_0.title 
+    [34mfrom[0m
+        books b1_0 
+    [34morder[0m [34mby[0m
+        b1_0.id
+2026-02-15 21:12:14.081 DEBUG org.hibernate.SQL - 
+    [34mselect[0m
+        b1_0.id,
+        b1_0.author,
+        b1_0.is_available,
+        b1_0.title 
+    [34mfrom[0m
+        books b1_0 
+    [34mwhere[0m
+        b1_0.is_available 
+    [34morder[0m [34mby[0m
+        b1_0.id
+2026-02-15 21:12:19.458 DEBUG org.hibernate.SQL - 
+    [34mselect[0m
+        b1_0.id,
+        b1_0.author,
+        b1_0.is_available,
+        b1_0.title 
+    [34mfrom[0m
+        books b1_0 
+    [34mwhere[0m
+        [34mnot[0m(b1_0.is_available) 
+    [34morder[0m [34mby[0m
+        b1_0.id
+2026-02-15 21:12:43.765 DEBUG org.hibernate.SQL - 
+    [34mselect[0m
+        u1_0.id,
+        u1_0.name 
+    [34mfrom[0m
+        users u1_0 
+    [34mwhere[0m
+        u1_0.id=?
+2026-02-15 21:12:45.700 DEBUG org.hibernate.SQL - 
+    [34mselect[0m
+        l1_0.id 
+    [34mfrom[0m
+        loans l1_0 
+    [34mwhere[0m
+        l1_0.user_id=? 
+        [34mand[0m l1_0.book_id=?
+2026-02-15 21:12:45.702 DEBUG org.hibernate.SQL - 
+    [34mselect[0m
+        l1_0.id,
+        l1_0.book_id,
+        l1_0.user_id 
+    [34mfrom[0m
+        loans l1_0 
+    [34mwhere[0m
+        l1_0.id=?
+2026-02-15 21:12:45.741 DEBUG org.hibernate.SQL - 
+    [34mupdate[0m
+        books 
+    [34mset[0m
+        author=?,
+        is_available=?,
+        title=? 
+    [34mwhere[0m
+        id=?
+2026-02-15 21:12:45.747 DEBUG org.hibernate.SQL - 
+    [34mdelete[0m 
+    [34mfrom[0m
+        loans 
+    [34mwhere[0m
+        id=?
+2026-02-15 21:12:53.423 DEBUG org.hibernate.SQL - 
+    [34mselect[0m
+        b1_0.id,
+        b1_0.author,
+        b1_0.is_available,
+        b1_0.title 
+    [34mfrom[0m
+        books b1_0 
+    [34mwhere[0m
+        b1_0.is_available 
+    [34morder[0m [34mby[0m
+        b1_0.id
+2026-02-15 21:13:03.518 DEBUG org.hibernate.SQL - 
+    [34mselect[0m
+        u1_0.id,
+        u1_0.name 
+    [34mfrom[0m
+        users u1_0 
+    [34mwhere[0m
+        u1_0.id=?
+2026-02-15 21:13:05.000 DEBUG org.hibernate.SQL - 
+    [34mselect[0m
+        b1_0.id,
+        b1_0.author,
+        b1_0.is_available,
+        b1_0.title 
+    [34mfrom[0m
+        books b1_0 
+    [34mwhere[0m
+        b1_0.id=?
+2026-02-15 21:13:05.004 DEBUG org.hibernate.SQL - 
+    [34mselect[0m
+        l1_0.id 
+    [34mfrom[0m
+        loans l1_0 
+    [34mwhere[0m
+        l1_0.user_id=? 
+        [34mand[0m l1_0.book_id=?
+2026-02-15 21:13:05.006 DEBUG org.hibernate.SQL - 
+    [34mselect[0m
+        l1_0.id,
+        l1_0.book_id,
+        l1_0.user_id 
+    [34mfrom[0m
+        loans l1_0 
+    [34mwhere[0m
+        l1_0.id=?
+2026-02-15 21:13:05.008 DEBUG org.hibernate.SQL - 
+    [34mupdate[0m
+        books 
+    [34mset[0m
+        author=?,
+        is_available=?,
+        title=? 
+    [34mwhere[0m
+        id=?
+2026-02-15 21:13:05.009 DEBUG org.hibernate.SQL - 
+    [34mdelete[0m 
+    [34mfrom[0m
+        loans 
+    [34mwhere[0m
+        id=?
+2026-02-15 21:13:11.279 DEBUG org.hibernate.SQL - 
+    [34mselect[0m
+        u1_0.id,
+        u1_0.name 
+    [34mfrom[0m
+        users u1_0 
+    [34mwhere[0m
+        u1_0.id=?
+2026-02-15 21:13:13.671 DEBUG org.hibernate.SQL - 
+    [34mselect[0m
+        b1_0.id,
+        b1_0.author,
+        b1_0.is_available,
+        b1_0.title 
+    [34mfrom[0m
+        books b1_0 
+    [34mwhere[0m
+        b1_0.id=?
+2026-02-15 21:13:43.783 DEBUG org.hibernate.SQL - 
+    [34mselect[0m
+        b1_0.id,
+        b1_0.author,
+        b1_0.is_available,
+        b1_0.title 
+    [34mfrom[0m
+        books b1_0 
+    [34mwhere[0m
+        [34mnot[0m(b1_0.is_available) 
+    [34morder[0m [34mby[0m
+        b1_0.id
+2026-02-15 21:14:12.439 DEBUG org.hibernate.SQL - 
+    [34mselect[0m
+        u1_0.id,
+        u1_0.name 
+    [34mfrom[0m
+        users u1_0 
+    [34mwhere[0m
+        u1_0.id=?
+2026-02-15 21:14:13.913 DEBUG org.hibernate.SQL - 
+    [34mselect[0m
+        l1_0.id 
+    [34mfrom[0m
+        loans l1_0 
+    [34mwhere[0m
+        l1_0.user_id=? 
+        [34mand[0m l1_0.book_id=?
+2026-02-15 21:14:13.918 DEBUG org.hibernate.SQL - 
+    [34mselect[0m
+        l1_0.id,
+        l1_0.book_id,
+        l1_0.user_id 
+    [34mfrom[0m
+        loans l1_0 
+    [34mwhere[0m
+        l1_0.id=?
+2026-02-15 21:14:13.921 DEBUG org.hibernate.SQL - 
+    [34mupdate[0m
+        books 
+    [34mset[0m
+        author=?,
+        is_available=?,
+        title=? 
+    [34mwhere[0m
+        id=?
+2026-02-15 21:14:13.923 DEBUG org.hibernate.SQL - 
+    [34mdelete[0m 
+    [34mfrom[0m
+        loans 
+    [34mwhere[0m
+        id=?
+2026-02-15 21:14:17.415 DEBUG org.hibernate.SQL - 
+    [34mselect[0m
+        b1_0.id,
+        b1_0.author,
+        b1_0.is_available,
+        b1_0.title 
+    [34mfrom[0m
+        books b1_0 
+    [34morder[0m [34mby[0m
+        b1_0.id
+2026-02-15 21:14:21.807 DEBUG org.hibernate.SQL - 
+    [34mselect[0m
+        b1_0.id,
+        b1_0.author,
+        b1_0.is_available,
+        b1_0.title 
+    [34mfrom[0m
+        books b1_0 
+    [34mwhere[0m
+        b1_0.is_available 
+    [34morder[0m [34mby[0m
+        b1_0.id
+2026-02-15 21:14:24.065 DEBUG org.hibernate.SQL - 
+    [34mselect[0m
+        b1_0.id,
+        b1_0.author,
+        b1_0.is_available,
+        b1_0.title 
+    [34mfrom[0m
+        books b1_0 
+    [34mwhere[0m
+        [34mnot[0m(b1_0.is_available) 
+    [34morder[0m [34mby[0m
+        b1_0.id

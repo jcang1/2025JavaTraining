@@ -1,0 +1,16 @@
+com\bpi\m6goupproject\Main.class
+com\bpi\m6groupproject\util\LibraryApplication.class
+com\bpi\m6groupproject\model\dto\BookDTO.class
+com\bpi\m6groupproject\repository\Repository.class
+com\bpi\m6groupproject\model\User.class
+com\bpi\m6groupproject\repository\LoanRepository.class
+com\bpi\m6groupproject\util\EntityManagerUtil.class
+com\bpi\m6groupproject\service\BookService.class
+com\bpi\m6groupproject\model\dto\UserDTO.class
+com\bpi\m6groupproject\util\LibraryApplication$MenuChoice.class
+com\bpi\m6groupproject\service\BookServiceImpl.class
+com\bpi\m6groupproject\model\Loan.class
+com\bpi\m6groupproject\model\Book.class
+com\bpi\m6groupproject\model\dto\LoanDto.class
+com\bpi\m6groupproject\repository\BookRepository.class
+com\bpi\m6groupproject\repository\UserRepository.class
