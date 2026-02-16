@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+
+  <!-- Console appender for YOUR application logs -->
+  <appender name="APP_CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+    <encoder>
+      <pattern>%d{HH:mm:ss.SSS} %highlight(%-5level) [%thread] %logger{20} - %msg%n</pattern>
+    </encoder>
+  </appender>
+
+  <!-- File appender for Hibernate logs -->
+  <appender name="HIBERNATE_FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+    <file>logs/hibernate.log</file>
+    <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+      <fileNamePattern>logs/hibernate.%d{yyyy-MM-dd}.log</fileNamePattern>
+      <maxHistory>7</maxHistory>
+    </rollingPolicy>
+    <encoder>
+      <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} %-5level %logger - %msg%n</pattern>
+    </encoder>
+  </appender>
+
+  <!-- Your application package -> console only -->
+  <!-- Change "ph.com.bpi" to your real root package if different -->
+  <logger name="ph.com.bpi" level="INFO" additivity="false">
+    <appender-ref ref="APP_CONSOLE"/>
+  </logger>
+
+  <!-- Hibernate categories -> file ONLY (no console) -->
+  <!-- General Hibernate messages -->
+  <logger name="org.hibernate" level="INFO" additivity="false">
+    <appender-ref ref="HIBERNATE_FILE"/>
+  </logger>
+
+  <!-- Executed SQL statements -->
+  <logger name="org.hibernate.SQL" level="DEBUG" additivity="false">
+    <appender-ref ref="HIBERNATE_FILE"/>
+  </logger>
+
+  <!-- Bound parameters (values in the SQL) -->
+  <logger name="org.hibernate.type.descriptor.sql" level="TRACE" additivity="false">
+    <appender-ref ref="HIBERNATE_FILE"/>
+  </logger>
+
+  <!-- Keep root modest and to console only -->
+  <root level="INFO">
+    <appender-ref ref="APP_CONSOLE"/>
+  </root>
+</configuration>

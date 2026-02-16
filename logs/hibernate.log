@@ -1,0 +1,1011 @@
+2026-02-16 12:38:37.966 INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-02-16 12:38:38.012 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 7.1.11.Final
+2026-02-16 12:38:38.323 WARN  org.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2026-02-16 12:38:38.619 WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-02-16 12:38:38.639 INFO  org.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://127.0.0.1:5432/training_db]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 18.1
+	Default catalog/schema: training_db/public
+	Autocommit mode: false
+	Isolation level: READ_COMMITTED
+	JDBC fetch size: none
+	Pool: DriverManagerConnectionProviderImpl
+	Minimum pool size: 1
+	Maximum pool size: 20
+2026-02-16 12:39:29.672 INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-02-16 12:39:29.719 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 7.1.11.Final
+2026-02-16 12:39:30.030 WARN  org.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2026-02-16 12:39:30.321 WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-02-16 12:39:30.339 INFO  org.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://127.0.0.1:5432/training_db]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 18.1
+	Default catalog/schema: training_db/public
+	Autocommit mode: false
+	Isolation level: READ_COMMITTED
+	JDBC fetch size: none
+	Pool: DriverManagerConnectionProviderImpl
+	Minimum pool size: 1
+	Maximum pool size: 20
+2026-02-16 12:48:50.356 INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-02-16 12:48:50.436 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 7.1.11.Final
+2026-02-16 12:48:50.945 WARN  org.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2026-02-16 12:48:51.435 WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-02-16 12:48:51.460 INFO  org.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://127.0.0.1:5432/training_db]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 18.1
+	Default catalog/schema: training_db/public
+	Autocommit mode: false
+	Isolation level: READ_COMMITTED
+	JDBC fetch size: none
+	Pool: DriverManagerConnectionProviderImpl
+	Minimum pool size: 1
+	Maximum pool size: 20
+2026-02-16 12:56:47.836 INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-02-16 12:56:47.877 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 7.1.11.Final
+2026-02-16 12:56:48.194 WARN  org.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2026-02-16 12:56:48.509 WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-02-16 12:56:48.532 INFO  org.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://127.0.0.1:5432/training_db]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 18.1
+	Default catalog/schema: training_db/public
+	Autocommit mode: false
+	Isolation level: READ_COMMITTED
+	JDBC fetch size: none
+	Pool: DriverManagerConnectionProviderImpl
+	Minimum pool size: 1
+	Maximum pool size: 20
+2026-02-16 12:56:49.727 INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-02-16 12:59:50.883 DEBUG org.hibernate.SQL - 
+    [34mselect[0m
+        b1_0.id,
+        b1_0.author,
+        b1_0.is_available,
+        b1_0.title 
+    [34mfrom[0m
+        books b1_0 
+    [34morder[0m [34mby[0m
+        b1_0.id
+2026-02-16 13:50:58.415 INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-02-16 13:50:58.469 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 7.1.11.Final
+2026-02-16 13:50:58.853 WARN  org.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2026-02-16 13:50:58.924 WARN  org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator - HHH000342: Could not obtain connection to query JDBC database metadata
+java.lang.IllegalStateException: Cannot get a connection as the driver manager is not properly initialized
+	at org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl.getConnection(DriverManagerConnectionProviderImpl.java:281)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:499)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcIsolationDelegate.delegateWork(JdbcIsolationDelegate.java:48)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironmentUsingJdbcMetadata(JdbcEnvironmentInitiator.java:355)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironment(JdbcEnvironmentInitiator.java:149)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:127)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:82)
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:133)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:262)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:237)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214)
+	at org.hibernate.service.ServiceRegistry.requireService(ServiceRegistry.java:66)
+	at org.hibernate.engine.jdbc.internal.JdbcServicesImpl.configure(JdbcServicesImpl.java:50)
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.configureService(StandardServiceRegistryImpl.java:139)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:246)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214)
+	at org.hibernate.engine.jdbc.connections.internal.BasicConnectionCreator.convertSqlException(BasicConnectionCreator.java:131)
+	at org.hibernate.engine.jdbc.connections.internal.DriverConnectionCreator.makeConnection(DriverConnectionCreator.java:41)
+	at org.hibernate.engine.jdbc.connections.internal.BasicConnectionCreator.createConnection(BasicConnectionCreator.java:59)
+	at org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl.buildPool(DriverManagerConnectionProviderImpl.java:124)
+	at org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl.configure(DriverManagerConnectionProviderImpl.java:86)
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.configureService(StandardServiceRegistryImpl.java:139)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:246)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214)
+	at org.hibernate.service.ServiceRegistry.requireService(ServiceRegistry.java:66)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.buildJdbcConnectionAccess(JdbcEnvironmentInitiator.java:466)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironmentUsingJdbcMetadata(JdbcEnvironmentInitiator.java:342)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironment(JdbcEnvironmentInitiator.java:149)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:127)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:82)
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:133)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:262)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:237)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214)
+	at org.hibernate.boot.model.relational.Database.<init>(Database.java:44)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.getDatabase(InFlightMetadataCollectorImpl.java:255)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:207)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:185)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1395)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.populateSessionFactoryBuilder(EntityManagerFactoryBuilderImpl.java:1475)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1457)
+	at org.hibernate.jpa.HibernatePersistenceProvider.createEntityManagerFactory(HibernatePersistenceProvider.java:56)
+	at jakarta.persistence.Persistence.createEntityManagerFactory(Persistence.java:90)
+	at jakarta.persistence.Persistence.createEntityManagerFactory(Persistence.java:66)
+	at com.bpi.m7groupproject.util.EntityManagerUtil.<init>(EntityManagerUtil.java:14)
+	at com.bpi.m7groupproject.util.EntityManagerUtil.getInstance(EntityManagerUtil.java:19)
+	at com.bpi.m7groupproject.Main.main(Main.java:29)
+2026-02-16 13:50:58.945 WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-02-16 13:52:16.166 INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-02-16 13:52:16.218 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 7.1.11.Final
+2026-02-16 13:52:16.983 WARN  org.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2026-02-16 13:52:17.420 WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-02-16 13:52:17.447 INFO  org.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://127.0.0.1:5432/training_db]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 18.1
+	Default catalog/schema: training_db/public
+	Autocommit mode: false
+	Isolation level: READ_COMMITTED
+	JDBC fetch size: none
+	Pool: DriverManagerConnectionProviderImpl
+	Minimum pool size: 1
+	Maximum pool size: 20
+2026-02-16 13:52:18.668 INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-02-16 13:52:23.794 DEBUG org.hibernate.SQL - 
+    [34mselect[0m
+        b1_0.id,
+        b1_0.author,
+        b1_0.is_available,
+        b1_0.title 
+    [34mfrom[0m
+        books b1_0 
+    [34morder[0m [34mby[0m
+        b1_0.id
+2026-02-16 13:54:48.126 DEBUG org.hibernate.SQL - 
+    [34mselect[0m
+        b1_0.id,
+        b1_0.author,
+        b1_0.is_available,
+        b1_0.title 
+    [34mfrom[0m
+        books b1_0 
+    [34mwhere[0m
+        b1_0.is_available 
+    [34morder[0m [34mby[0m
+        b1_0.id
+2026-02-16 13:55:15.383 DEBUG org.hibernate.SQL - 
+    [34mselect[0m
+        b1_0.id,
+        b1_0.author,
+        b1_0.is_available,
+        b1_0.title 
+    [34mfrom[0m
+        books b1_0 
+    [34mwhere[0m
+        [34mnot[0m(b1_0.is_available) 
+    [34morder[0m [34mby[0m
+        b1_0.id
+2026-02-16 14:03:24.051 DEBUG org.hibernate.SQL - 
+    [34mselect[0m
+        b1_0.id,
+        b1_0.author,
+        b1_0.is_available,
+        b1_0.title 
+    [34mfrom[0m
+        books b1_0 
+    [34mwhere[0m
+        [34mnot[0m(b1_0.is_available) 
+    [34morder[0m [34mby[0m
+        b1_0.id
+2026-02-16 14:25:41.854 INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-02-16 14:25:41.950 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 7.1.11.Final
+2026-02-16 14:25:42.375 WARN  org.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2026-02-16 14:25:42.799 WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-02-16 14:25:42.822 INFO  org.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://127.0.0.1:5432/training_db]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 18.1
+	Default catalog/schema: training_db/public
+	Autocommit mode: false
+	Isolation level: READ_COMMITTED
+	JDBC fetch size: none
+	Pool: DriverManagerConnectionProviderImpl
+	Minimum pool size: 1
+	Maximum pool size: 20
+2026-02-16 14:25:44.195 INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-02-16 14:25:59.210 DEBUG org.hibernate.SQL - 
+    [34mselect[0m
+        b1_0.id,
+        b1_0.author,
+        b1_0.is_available,
+        b1_0.title 
+    [34mfrom[0m
+        books b1_0 
+    [34morder[0m [34mby[0m
+        b1_0.id
+2026-02-16 14:26:02.498 DEBUG org.hibernate.SQL - 
+    [34mselect[0m
+        b1_0.id,
+        b1_0.author,
+        b1_0.is_available,
+        b1_0.title 
+    [34mfrom[0m
+        books b1_0 
+    [34mwhere[0m
+        b1_0.is_available 
+    [34morder[0m [34mby[0m
+        b1_0.id
+2026-02-16 14:26:06.077 DEBUG org.hibernate.SQL - 
+    [34mselect[0m
+        b1_0.id,
+        b1_0.author,
+        b1_0.is_available,
+        b1_0.title 
+    [34mfrom[0m
+        books b1_0 
+    [34mwhere[0m
+        [34mnot[0m(b1_0.is_available) 
+    [34morder[0m [34mby[0m
+        b1_0.id
+2026-02-16 14:26:09.704 DEBUG org.hibernate.SQL - 
+    [34mselect[0m
+        u1_0.id,
+        u1_0.name 
+    [34mfrom[0m
+        users u1_0 
+    [34mwhere[0m
+        u1_0.id=?
+2026-02-16 14:26:09.731 DEBUG org.hibernate.SQL - 
+    [34mselect[0m
+        count(l1_0.id) 
+    [34mfrom[0m
+        loans l1_0 
+    [34mwhere[0m
+        l1_0.user_id=?
+2026-02-16 14:26:09.764 DEBUG org.hibernate.SQL - 
+    [34minsert[0m 
+    [34minto[0m
+        loans
+        (book_id, user_id) 
+    [34mvalues[0m
+        (?, ?)
+2026-02-16 14:26:09.804 DEBUG org.hibernate.SQL - 
+    [34mupdate[0m
+        books 
+    [34mset[0m
+        author=?,
+        is_available=?,
+        title=? 
+    [34mwhere[0m
+        id=?
+2026-02-16 14:26:18.040 DEBUG org.hibernate.SQL - 
+    [34mselect[0m
+        b1_0.id,
+        b1_0.author,
+        b1_0.is_available,
+        b1_0.title 
+    [34mfrom[0m
+        books b1_0 
+    [34mwhere[0m
+        [34mnot[0m(b1_0.is_available) 
+    [34morder[0m [34mby[0m
+        b1_0.id
+2026-02-16 14:26:55.569 DEBUG org.hibernate.SQL - 
+    [34mselect[0m
+        u1_0.id,
+        u1_0.name 
+    [34mfrom[0m
+        users u1_0 
+    [34mwhere[0m
+        u1_0.id=?
+2026-02-16 14:26:55.578 DEBUG org.hibernate.SQL - 
+    [34mselect[0m
+        l1_0.id 
+    [34mfrom[0m
+        loans l1_0 
+    [34mwhere[0m
+        l1_0.user_id=? 
+        [34mand[0m l1_0.book_id=?
+2026-02-16 14:26:55.582 DEBUG org.hibernate.SQL - 
+    [34mselect[0m
+        l1_0.id,
+        l1_0.book_id,
+        l1_0.user_id 
+    [34mfrom[0m
+        loans l1_0 
+    [34mwhere[0m
+        l1_0.id=?
+2026-02-16 14:26:55.594 DEBUG org.hibernate.SQL - 
+    [34mupdate[0m
+        books 
+    [34mset[0m
+        author=?,
+        is_available=?,
+        title=? 
+    [34mwhere[0m
+        id=?
+2026-02-16 14:26:55.599 DEBUG org.hibernate.SQL - 
+    [34mdelete[0m 
+    [34mfrom[0m
+        loans 
+    [34mwhere[0m
+        id=?
+2026-02-16 14:27:00.003 DEBUG org.hibernate.SQL - 
+    [34mselect[0m
+        b1_0.id,
+        b1_0.author,
+        b1_0.is_available,
+        b1_0.title 
+    [34mfrom[0m
+        books b1_0 
+    [34mwhere[0m
+        [34mnot[0m(b1_0.is_available) 
+    [34morder[0m [34mby[0m
+        b1_0.id
+2026-02-16 14:27:03.658 DEBUG org.hibernate.SQL - 
+    [34mselect[0m
+        b1_0.id,
+        b1_0.author,
+        b1_0.is_available,
+        b1_0.title 
+    [34mfrom[0m
+        books b1_0 
+    [34mwhere[0m
+        b1_0.is_available 
+    [34morder[0m [34mby[0m
+        b1_0.id
+2026-02-16 14:32:08.546 DEBUG org.hibernate.SQL - 
+    [34mselect[0m
+        b1_0.id,
+        b1_0.author,
+        b1_0.is_available,
+        b1_0.title 
+    [34mfrom[0m
+        books b1_0 
+    [34morder[0m [34mby[0m
+        b1_0.id
+2026-02-16 14:32:15.684 DEBUG org.hibernate.SQL - 
+    [34mselect[0m
+        b1_0.id,
+        b1_0.author,
+        b1_0.is_available,
+        b1_0.title 
+    [34mfrom[0m
+        books b1_0 
+    [34mwhere[0m
+        b1_0.is_available 
+    [34morder[0m [34mby[0m
+        b1_0.id
+2026-02-16 14:32:19.267 DEBUG org.hibernate.SQL - 
+    [34mselect[0m
+        b1_0.id,
+        b1_0.author,
+        b1_0.is_available,
+        b1_0.title 
+    [34mfrom[0m
+        books b1_0 
+    [34mwhere[0m
+        [34mnot[0m(b1_0.is_available) 
+    [34morder[0m [34mby[0m
+        b1_0.id
+2026-02-16 14:39:41.551 INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-02-16 14:39:41.592 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 7.1.11.Final
+2026-02-16 14:39:41.900 WARN  org.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2026-02-16 14:39:42.199 WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-02-16 14:39:42.220 INFO  org.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://127.0.0.1:5432/training_db]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 18.1
+	Default catalog/schema: training_db/public
+	Autocommit mode: false
+	Isolation level: READ_COMMITTED
+	JDBC fetch size: none
+	Pool: DriverManagerConnectionProviderImpl
+	Minimum pool size: 1
+	Maximum pool size: 20
+2026-02-16 14:39:43.297 INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-02-16 14:39:51.804 DEBUG org.hibernate.SQL - 
+    [34mselect[0m
+        b1_0.id,
+        b1_0.author,
+        b1_0.is_available,
+        b1_0.title 
+    [34mfrom[0m
+        books b1_0 
+    [34morder[0m [34mby[0m
+        b1_0.id
+2026-02-16 14:39:56.591 DEBUG org.hibernate.SQL - 
+    [34mselect[0m
+        b1_0.id,
+        b1_0.author,
+        b1_0.is_available,
+        b1_0.title 
+    [34mfrom[0m
+        books b1_0 
+    [34mwhere[0m
+        b1_0.is_available 
+    [34morder[0m [34mby[0m
+        b1_0.id
+2026-02-16 14:39:59.797 DEBUG org.hibernate.SQL - 
+    [34mselect[0m
+        b1_0.id,
+        b1_0.author,
+        b1_0.is_available,
+        b1_0.title 
+    [34mfrom[0m
+        books b1_0 
+    [34mwhere[0m
+        [34mnot[0m(b1_0.is_available) 
+    [34morder[0m [34mby[0m
+        b1_0.id
+2026-02-16 14:47:05.033 INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-02-16 14:47:05.076 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 7.1.11.Final
+2026-02-16 14:47:05.384 WARN  org.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2026-02-16 14:47:05.736 WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-02-16 14:47:05.757 INFO  org.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://127.0.0.1:5432/training_db]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 18.1
+	Default catalog/schema: training_db/public
+	Autocommit mode: false
+	Isolation level: READ_COMMITTED
+	JDBC fetch size: none
+	Pool: DriverManagerConnectionProviderImpl
+	Minimum pool size: 1
+	Maximum pool size: 20
+2026-02-16 14:47:06.963 INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-02-16 14:47:15.539 DEBUG org.hibernate.SQL - 
+    [34mselect[0m
+        b1_0.id,
+        b1_0.author,
+        b1_0.is_available,
+        b1_0.title 
+    [34mfrom[0m
+        books b1_0 
+    [34morder[0m [34mby[0m
+        b1_0.id
+2026-02-16 14:49:14.125 INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-02-16 14:49:14.171 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 7.1.11.Final
+2026-02-16 14:49:14.476 WARN  org.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2026-02-16 14:49:14.778 WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-02-16 14:49:14.799 INFO  org.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://127.0.0.1:5432/training_db]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 18.1
+	Default catalog/schema: training_db/public
+	Autocommit mode: false
+	Isolation level: READ_COMMITTED
+	JDBC fetch size: none
+	Pool: DriverManagerConnectionProviderImpl
+	Minimum pool size: 1
+	Maximum pool size: 20
+2026-02-16 14:49:15.866 INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-02-16 14:49:25.156 DEBUG org.hibernate.SQL - 
+    [34mselect[0m
+        b1_0.id,
+        b1_0.author,
+        b1_0.is_available,
+        b1_0.title 
+    [34mfrom[0m
+        books b1_0 
+    [34morder[0m [34mby[0m
+        b1_0.id
+2026-02-16 14:49:28.642 DEBUG org.hibernate.SQL - 
+    [34minsert[0m 
+    [34minto[0m
+        books
+        (author, is_available, title) 
+    [34mvalues[0m
+        (?, ?, ?)
+2026-02-16 14:59:13.422 INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-02-16 14:59:13.482 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 7.1.11.Final
+2026-02-16 14:59:13.911 WARN  org.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2026-02-16 14:59:14.274 WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-02-16 14:59:14.289 INFO  org.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://127.0.0.1:5432/training_db]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 18.1
+	Default catalog/schema: training_db/public
+	Autocommit mode: false
+	Isolation level: READ_COMMITTED
+	JDBC fetch size: none
+	Pool: DriverManagerConnectionProviderImpl
+	Minimum pool size: 1
+	Maximum pool size: 20
+2026-02-16 14:59:15.660 INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-02-16 14:59:25.524 DEBUG org.hibernate.SQL - 
+    [34mselect[0m
+        b1_0.id,
+        b1_0.author,
+        b1_0.is_available,
+        b1_0.title 
+    [34mfrom[0m
+        books b1_0 
+    [34morder[0m [34mby[0m
+        b1_0.id
+2026-02-16 14:59:39.656 DEBUG org.hibernate.SQL - 
+    [34mselect[0m
+        l1_0.id 
+    [34mfrom[0m
+        loans l1_0 
+    [34mwhere[0m
+        l1_0.book_id=?
+2026-02-16 14:59:47.526 DEBUG org.hibernate.SQL - 
+    [34mselect[0m
+        b1_0.id,
+        b1_0.author,
+        b1_0.is_available,
+        b1_0.title 
+    [34mfrom[0m
+        books b1_0 
+    [34morder[0m [34mby[0m
+        b1_0.id
+2026-02-16 15:00:02.401 DEBUG org.hibernate.SQL - 
+    [34mselect[0m
+        b1_0.id,
+        b1_0.author,
+        b1_0.is_available,
+        b1_0.title 
+    [34mfrom[0m
+        books b1_0 
+    [34morder[0m [34mby[0m
+        b1_0.id
+2026-02-16 15:00:09.505 DEBUG org.hibernate.SQL - 
+    [34mselect[0m
+        l1_0.id 
+    [34mfrom[0m
+        loans l1_0 
+    [34mwhere[0m
+        l1_0.book_id=?
+2026-02-16 15:02:54.309 INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-02-16 15:02:54.357 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 7.1.11.Final
+2026-02-16 15:02:54.685 WARN  org.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2026-02-16 15:02:54.979 WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-02-16 15:02:54.997 INFO  org.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://127.0.0.1:5432/training_db]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 18.1
+	Default catalog/schema: training_db/public
+	Autocommit mode: false
+	Isolation level: READ_COMMITTED
+	JDBC fetch size: none
+	Pool: DriverManagerConnectionProviderImpl
+	Minimum pool size: 1
+	Maximum pool size: 20
+2026-02-16 15:02:56.090 INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-02-16 15:03:03.945 DEBUG org.hibernate.SQL - 
+    [34mselect[0m
+        b1_0.id,
+        b1_0.author,
+        b1_0.is_available,
+        b1_0.title 
+    [34mfrom[0m
+        books b1_0 
+    [34morder[0m [34mby[0m
+        b1_0.id
+2026-02-16 15:03:08.785 DEBUG org.hibernate.SQL - 
+    [34mselect[0m
+        l1_0.id 
+    [34mfrom[0m
+        loans l1_0 
+    [34mwhere[0m
+        l1_0.book_id=?
+2026-02-16 15:03:08.800 DEBUG org.hibernate.SQL - 
+    [34mselect[0m
+        l1_0.book_id,
+        l1_0.id,
+        l1_0.user_id 
+    [34mfrom[0m
+        loans l1_0 
+    [34mwhere[0m
+        l1_0.book_id=?
+2026-02-16 15:03:08.825 DEBUG org.hibernate.SQL - 
+    [34mdelete[0m 
+    [34mfrom[0m
+        books 
+    [34mwhere[0m
+        id=?
+2026-02-16 15:03:14.517 DEBUG org.hibernate.SQL - 
+    [34mselect[0m
+        b1_0.id,
+        b1_0.author,
+        b1_0.is_available,
+        b1_0.title 
+    [34mfrom[0m
+        books b1_0 
+    [34morder[0m [34mby[0m
+        b1_0.id
+2026-02-16 15:03:36.431 DEBUG org.hibernate.SQL - 
+    [34mselect[0m
+        b1_0.id,
+        b1_0.author,
+        b1_0.is_available,
+        b1_0.title 
+    [34mfrom[0m
+        books b1_0 
+    [34morder[0m [34mby[0m
+        b1_0.id
+2026-02-16 15:19:40.635 INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-02-16 15:19:40.683 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 7.1.11.Final
+2026-02-16 15:19:41.014 WARN  org.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2026-02-16 15:19:41.313 WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-02-16 15:19:41.333 INFO  org.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://127.0.0.1:5432/training_db]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 18.1
+	Default catalog/schema: training_db/public
+	Autocommit mode: false
+	Isolation level: READ_COMMITTED
+	JDBC fetch size: none
+	Pool: DriverManagerConnectionProviderImpl
+	Minimum pool size: 1
+	Maximum pool size: 20
+2026-02-16 15:19:42.475 INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-02-16 15:19:50.886 DEBUG org.hibernate.SQL - 
+    [34mselect[0m
+        b1_0.id,
+        b1_0.author,
+        b1_0.is_available,
+        b1_0.title 
+    [34mfrom[0m
+        books b1_0 
+    [34morder[0m [34mby[0m
+        b1_0.id
+2026-02-16 15:21:13.598 DEBUG org.hibernate.SQL - 
+    [34mupdate[0m
+        books 
+    [34mset[0m
+        author=?,
+        is_available=?,
+        title=? 
+    [34mwhere[0m
+        id=?
+2026-02-16 15:21:28.247 DEBUG org.hibernate.SQL - 
+    [34mselect[0m
+        u1_0.id,
+        u1_0.name 
+    [34mfrom[0m
+        users u1_0 
+    [34mwhere[0m
+        u1_0.id=?
+2026-02-16 15:21:28.308 DEBUG org.hibernate.SQL - 
+    [34mselect[0m
+        count(l1_0.id) 
+    [34mfrom[0m
+        loans l1_0 
+    [34mwhere[0m
+        l1_0.user_id=?
+2026-02-16 15:21:28.328 DEBUG org.hibernate.SQL - 
+    [34minsert[0m 
+    [34minto[0m
+        loans
+        (book_id, user_id) 
+    [34mvalues[0m
+        (?, ?)
+2026-02-16 15:21:28.347 DEBUG org.hibernate.SQL - 
+    [34mupdate[0m
+        books 
+    [34mset[0m
+        author=?,
+        is_available=?,
+        title=? 
+    [34mwhere[0m
+        id=?
+2026-02-16 15:21:41.970 DEBUG org.hibernate.SQL - 
+    [34mselect[0m
+        b1_0.id,
+        b1_0.author,
+        b1_0.is_available,
+        b1_0.title 
+    [34mfrom[0m
+        books b1_0 
+    [34mwhere[0m
+        [34mnot[0m(b1_0.is_available) 
+    [34morder[0m [34mby[0m
+        b1_0.id
+2026-02-16 15:22:24.778 DEBUG org.hibernate.SQL - 
+    [34mselect[0m
+        b1_0.id,
+        b1_0.author,
+        b1_0.is_available,
+        b1_0.title 
+    [34mfrom[0m
+        books b1_0 
+    [34morder[0m [34mby[0m
+        b1_0.id
+2026-02-16 15:31:51.722 INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-02-16 15:31:51.766 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 7.1.11.Final
+2026-02-16 15:31:52.075 WARN  org.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2026-02-16 15:31:52.352 WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-02-16 15:31:52.371 INFO  org.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://127.0.0.1:5432/training_db]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 18.1
+	Default catalog/schema: training_db/public
+	Autocommit mode: false
+	Isolation level: READ_COMMITTED
+	JDBC fetch size: none
+	Pool: DriverManagerConnectionProviderImpl
+	Minimum pool size: 1
+	Maximum pool size: 20
+2026-02-16 15:31:53.436 INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-02-16 15:31:59.192 DEBUG org.hibernate.SQL - 
+    [34mselect[0m
+        b1_0.id,
+        b1_0.author,
+        b1_0.is_available,
+        b1_0.title 
+    [34mfrom[0m
+        books b1_0 
+    [34morder[0m [34mby[0m
+        b1_0.id
+2026-02-16 15:32:01.867 DEBUG org.hibernate.SQL - 
+    [34mselect[0m
+        b1_0.id,
+        b1_0.author,
+        b1_0.is_available,
+        b1_0.title 
+    [34mfrom[0m
+        books b1_0 
+    [34mwhere[0m
+        b1_0.is_available 
+    [34morder[0m [34mby[0m
+        b1_0.id
+2026-02-16 15:32:05.277 DEBUG org.hibernate.SQL - 
+    [34mselect[0m
+        b1_0.id,
+        b1_0.author,
+        b1_0.is_available,
+        b1_0.title 
+    [34mfrom[0m
+        books b1_0 
+    [34mwhere[0m
+        [34mnot[0m(b1_0.is_available) 
+    [34morder[0m [34mby[0m
+        b1_0.id
+2026-02-16 15:32:33.814 DEBUG org.hibernate.SQL - 
+    [34mselect[0m
+        l1_0.id 
+    [34mfrom[0m
+        loans l1_0 
+    [34mwhere[0m
+        l1_0.book_id=?
+2026-02-16 15:32:33.824 DEBUG org.hibernate.SQL - 
+    [34mselect[0m
+        l1_0.book_id,
+        l1_0.id,
+        l1_0.user_id 
+    [34mfrom[0m
+        loans l1_0 
+    [34mwhere[0m
+        l1_0.book_id=?
+2026-02-16 15:32:33.850 DEBUG org.hibernate.SQL - 
+    [34mdelete[0m 
+    [34mfrom[0m
+        books 
+    [34mwhere[0m
+        id=?
+2026-02-16 15:33:03.254 DEBUG org.hibernate.SQL - 
+    [34minsert[0m 
+    [34minto[0m
+        books
+        (author, is_available, title) 
+    [34mvalues[0m
+        (?, ?, ?)
+2026-02-16 15:33:09.933 DEBUG org.hibernate.SQL - 
+    [34mselect[0m
+        u1_0.id,
+        u1_0.name 
+    [34mfrom[0m
+        users u1_0 
+    [34mwhere[0m
+        u1_0.id=?
+2026-02-16 15:33:09.936 DEBUG org.hibernate.SQL - 
+    [34mselect[0m
+        b1_0.id,
+        b1_0.author,
+        b1_0.is_available,
+        b1_0.title 
+    [34mfrom[0m
+        books b1_0 
+    [34mwhere[0m
+        b1_0.id=?
+2026-02-16 15:33:09.942 DEBUG org.hibernate.SQL - 
+    [34mselect[0m
+        l1_0.id 
+    [34mfrom[0m
+        loans l1_0 
+    [34mwhere[0m
+        l1_0.user_id=? 
+        [34mand[0m l1_0.book_id=?
+2026-02-16 15:33:09.944 DEBUG org.hibernate.SQL - 
+    [34mselect[0m
+        l1_0.id,
+        l1_0.book_id,
+        l1_0.user_id 
+    [34mfrom[0m
+        loans l1_0 
+    [34mwhere[0m
+        l1_0.id=?
+2026-02-16 15:33:09.961 DEBUG org.hibernate.SQL - 
+    [34mupdate[0m
+        books 
+    [34mset[0m
+        author=?,
+        is_available=?,
+        title=? 
+    [34mwhere[0m
+        id=?
+2026-02-16 15:33:09.964 DEBUG org.hibernate.SQL - 
+    [34mdelete[0m 
+    [34mfrom[0m
+        loans 
+    [34mwhere[0m
+        id=?
+2026-02-16 15:33:22.322 DEBUG org.hibernate.SQL - 
+    [34mselect[0m
+        u1_0.id,
+        u1_0.name 
+    [34mfrom[0m
+        users u1_0 
+    [34mwhere[0m
+        u1_0.id=?
+2026-02-16 15:33:22.333 DEBUG org.hibernate.SQL - 
+    [34mselect[0m
+        count(l1_0.id) 
+    [34mfrom[0m
+        loans l1_0 
+    [34mwhere[0m
+        l1_0.user_id=?
+2026-02-16 15:33:22.338 DEBUG org.hibernate.SQL - 
+    [34mselect[0m
+        b1_0.id,
+        b1_0.author,
+        b1_0.is_available,
+        b1_0.title 
+    [34mfrom[0m
+        books b1_0 
+    [34mwhere[0m
+        b1_0.id=?
+2026-02-16 15:33:33.201 DEBUG org.hibernate.SQL - 
+    [34mselect[0m
+        b1_0.id,
+        b1_0.author,
+        b1_0.is_available,
+        b1_0.title 
+    [34mfrom[0m
+        books b1_0 
+    [34morder[0m [34mby[0m
+        b1_0.id
+2026-02-16 15:40:28.678 INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-02-16 15:40:28.723 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 7.1.11.Final
+2026-02-16 15:40:29.034 WARN  org.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2026-02-16 15:40:29.319 WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-02-16 15:40:29.335 INFO  org.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://127.0.0.1:5432/training_db]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 18.1
+	Default catalog/schema: training_db/public
+	Autocommit mode: false
+	Isolation level: READ_COMMITTED
+	JDBC fetch size: none
+	Pool: DriverManagerConnectionProviderImpl
+	Minimum pool size: 1
+	Maximum pool size: 20
+2026-02-16 15:40:30.393 INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-02-16 15:40:39.783 DEBUG org.hibernate.SQL - 
+    [34mselect[0m
+        b1_0.id,
+        b1_0.author,
+        b1_0.is_available,
+        b1_0.title 
+    [34mfrom[0m
+        books b1_0 
+    [34morder[0m [34mby[0m
+        b1_0.id
+2026-02-16 15:40:51.223 DEBUG org.hibernate.SQL - 
+    [34mselect[0m
+        b1_0.id,
+        b1_0.author,
+        b1_0.is_available,
+        b1_0.title 
+    [34mfrom[0m
+        books b1_0 
+    [34mwhere[0m
+        [34mnot[0m(b1_0.is_available) 
+    [34morder[0m [34mby[0m
+        b1_0.id
+2026-02-16 15:40:58.996 DEBUG org.hibernate.SQL - 
+    [34mselect[0m
+        b1_0.id,
+        b1_0.author,
+        b1_0.is_available,
+        b1_0.title 
+    [34mfrom[0m
+        books b1_0 
+    [34mwhere[0m
+        b1_0.is_available 
+    [34morder[0m [34mby[0m
+        b1_0.id
+2026-02-16 15:41:24.986 DEBUG org.hibernate.SQL - 
+    [34mselect[0m
+        u1_0.id,
+        u1_0.name 
+    [34mfrom[0m
+        users u1_0 
+    [34mwhere[0m
+        u1_0.id=?
+2026-02-16 15:41:25.016 DEBUG org.hibernate.SQL - 
+    [34mselect[0m
+        count(l1_0.id) 
+    [34mfrom[0m
+        loans l1_0 
+    [34mwhere[0m
+        l1_0.user_id=?
+2026-02-16 15:41:25.049 DEBUG org.hibernate.SQL - 
+    [34minsert[0m 
+    [34minto[0m
+        loans
+        (book_id, user_id) 
+    [34mvalues[0m
+        (?, ?)
+2026-02-16 15:41:25.092 DEBUG org.hibernate.SQL - 
+    [34mupdate[0m
+        books 
+    [34mset[0m
+        author=?,
+        is_available=?,
+        title=? 
+    [34mwhere[0m
+        id=?
+2026-02-16 15:41:43.436 DEBUG org.hibernate.SQL - 
+    [34mselect[0m
+        u1_0.id,
+        u1_0.name 
+    [34mfrom[0m
+        users u1_0 
+    [34mwhere[0m
+        u1_0.id=?
+2026-02-16 15:41:43.440 DEBUG org.hibernate.SQL - 
+    [34mselect[0m
+        b1_0.id,
+        b1_0.author,
+        b1_0.is_available,
+        b1_0.title 
+    [34mfrom[0m
+        books b1_0 
+    [34mwhere[0m
+        b1_0.id=?
+2026-02-16 15:41:43.450 DEBUG org.hibernate.SQL - 
+    [34mselect[0m
+        l1_0.id 
+    [34mfrom[0m
+        loans l1_0 
+    [34mwhere[0m
+        l1_0.user_id=? 
+        [34mand[0m l1_0.book_id=?
+2026-02-16 15:41:43.453 DEBUG org.hibernate.SQL - 
+    [34mselect[0m
+        l1_0.id,
+        l1_0.book_id,
+        l1_0.user_id 
+    [34mfrom[0m
+        loans l1_0 
+    [34mwhere[0m
+        l1_0.id=?
+2026-02-16 15:41:43.470 DEBUG org.hibernate.SQL - 
+    [34mupdate[0m
+        books 
+    [34mset[0m
+        author=?,
+        is_available=?,
+        title=? 
+    [34mwhere[0m
+        id=?
+2026-02-16 15:41:43.475 DEBUG org.hibernate.SQL - 
+    [34mdelete[0m 
+    [34mfrom[0m
+        loans 
+    [34mwhere[0m
+        id=?
