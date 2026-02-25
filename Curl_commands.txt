@@ -1,0 +1,21 @@
+curl --request GET \
+  --url http://localhost:4568/profiles
+
+curl --request POST \
+  --url http://localhost:4568/profiles \
+  --header 'content-type: application/json' \
+  --data '{
+  "name": "Johnson Ang",
+  "group": "Group 9 [Teacher Enzo][Lead Arnold]"
+}'
+
+curl --request PUT \
+  --url 'http://localhost:4568/profiles?name=Emilio%20Aguinaldo' \
+  --header 'content-type: application/json' \
+  --data '{
+  "name": "Antonio Luna",
+  "group": "Illustrados"
+}'
+
+curl --request DELETE \
+  --url http://localhost:4568/profiles/2
