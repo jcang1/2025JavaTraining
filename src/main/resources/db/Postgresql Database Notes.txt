@@ -1,0 +1,111 @@
+cd C:\Users\jcang1\psql-portable\pgsql\bin
+pg_ctl -D ^"^.^.^\^.^.data^\^\^" -l logfile start
+.\psql.exe -U jcang1 -d postgres
+
+CREATE DATABASE training_db_java_final_project;
+ \c  training_db_java_final_project;
+ 
+GRANT ALL PRIVILEGES ON DATABASE training_db_java_final_project TO postgres; 
+
+-- ==========================
+-- USERS TABLE
+-- ==========================
+CREATE TABLE users (
+    user_id BIGSERIAL PRIMARY KEY,
+    username VARCHAR(50) NOT NULL UNIQUE,
+    password VARCHAR(100) NOT NULL,
+	role VARCHAR(50) NOT NULL
+);
+
+-- ==========================
+-- BOOKS TABLE
+-- ==========================
+
+CREATE TABLE books (
+    id BIGSERIAL PRIMARY KEY NOT NULL,
+    title VARCHAR(255),
+    author VARCHAR(255),
+    published_date DATE,
+	library_record_created_date DATE,
+	read_flag BOOLEAN NOT NULL DEFAULT FALSE,
+	user_id BIGINT NULL,
+	
+	    CONSTRAINT fk_user
+        FOREIGN KEY (user_id)
+        REFERENCES users (user_id)
+);
+
+GRANT ALL PRIVILEGES ON ALL SEQUENCES IN SCHEMA public TO postgres;
+
+
+training_db_java_final_project=# \d users
+                                       Table "public.users"
+  Column  |          Type          | Collation | Nullable |                Default
+----------+------------------------+-----------+----------+----------------------------------------
+ user_id  | bigint                 |           | not null | nextval('users_user_id_seq'::regclass)
+ username | character varying(50)  |           | not null |
+ password | character varying(100) |           | not null |
+ role     | character varying(50)  |           | not null |
+Indexes:
+    "users_pkey" PRIMARY KEY, btree (user_id)
+    "users_username_key" UNIQUE CONSTRAINT, btree (username)
+Referenced by:
+    TABLE "books" CONSTRAINT "fk_role" FOREIGN KEY (user_id) REFERENCES users(user_id)
+	
+training_db_java_final_project=# \d books;
+                                              Table "public.books"
+           Column            |          Type          | Collation | Nullable |              Default
+-----------------------------+------------------------+-----------+----------+-----------------------------------
+ id                          | bigint                 |           | not null | nextval('books_id_seq'::regclass)
+ title                       | character varying(255) |           |          |
+ author                      | character varying(255) |           |          |
+ published_date              | date                   |           |          |
+ library_record_created_date | date                   |           |          |
+ read_flag                   | boolean                |           | not null | true
+ user_id                     | bigint                 |           |          |
+Indexes:
+    "books_pkey" PRIMARY KEY, btree (id)
+Foreign-key constraints:
+    "fk_role" FOREIGN KEY (user_id) REFERENCES users(user_id)
+
+	
+	
+GRANT ALL PRIVILEGES ON SEQUENCE users_user_id_seq TO postgres;
+GRANT ALL PRIVILEGES ON SEQUENCE books_id_seq TO postgres;
+
+GRANT SELECT, INSERT, UPDATE, DELETE ON TABLE users TO postgres;
+GRANT SELECT, INSERT, UPDATE, DELETE ON TABLE books TO postgres;
+
+ALTER SEQUENCE users_user_id_seq RESTART WITH 1;
+
+ALTER SEQUENCE books_id_seq RESTART WITH 1;
+
+
+INSERT INTO books (
+    title,
+    author,
+    published_date,
+    library_record_created_date,
+    user_id
+) VALUES
+
+-- ? More than 1 year old (5)
+('The Power of Habit', 'Charles Duhigg', '2012-02-28', CURRENT_DATE - INTERVAL '2 years', null),
+('Mindset', 'Carol S. Dweck', '2006-02-28', CURRENT_DATE - INTERVAL '18 months', null),
+('The Hobbit', 'J.R.R. Tolkien', '1937-09-21', CURRENT_DATE - INTERVAL '3 years', null),
+('Harry Potter and the Sorcerer''s Stone', 'J.K. Rowling', '1997-06-26', CURRENT_DATE - INTERVAL '400 days', null),
+('Pride and Prejudice', 'Jane Austen', '1813-01-28', CURRENT_DATE - INTERVAL '500 days', null),
+
+-- ? Less than 1 year but more than 1 week (5)
+('Atomic Habits', 'James Clear', '2018-10-16', CURRENT_DATE - INTERVAL '6 months', null),
+('Deep Work', 'Cal Newport', '2016-01-05', CURRENT_DATE - INTERVAL '3 months', null),
+('The Name of the Wind', 'Patrick Rothfuss', '2007-03-27', CURRENT_DATE - INTERVAL '2 months', null),
+('The Alchemist', 'Paulo Coelho', '1988-01-01', CURRENT_DATE - INTERVAL '20 days', null),
+('1984', 'George Orwell', '1949-06-08', CURRENT_DATE - INTERVAL '10 days', null),
+
+-- ? Less than 1 week old (5)
+('Think Like a Monk', 'Jay Shetty', '2020-09-08', CURRENT_DATE - INTERVAL '6 days', null),
+('The Midnight Library', 'Matt Haig', '2020-09-29', CURRENT_DATE - INTERVAL '4 days', null),
+('The Subtle Art of Not Giving a F*ck', 'Mark Manson', '2016-09-13', CURRENT_DATE - INTERVAL '3 days', null),
+('Mistborn: The Final Empire', 'Brandon Sanderson', '2006-07-17', CURRENT_DATE - INTERVAL '2 days', null),
+('The Little Prince', 'Antoine de Saint-Exupéry', '1943-04-06', CURRENT_DATE - INTERVAL '1 day', null);

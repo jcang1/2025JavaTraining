@@ -1,57 +1,76 @@
+/*
+ * This should correspond to a table in database. The table design are found in "Postgresql Database Notes.txt"
+ * Initial data is in DataInitializer.java
+ */
 package com.example.demo.DAO;
 
+import jakarta.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
-
-import com.example.demo.DTO.UserDTO;
-
-import jakarta.persistence.CascadeType;
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.OneToMany;
-import jakarta.persistence.Table;
 
 @Entity
 @Table(name = "users")
 public class User {
 
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY) // matches SERIAL
-	private Long id;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "user_id")
+    private Long userId;
 
-	@Column(name = "name", nullable = false, length = 50, columnDefinition = "VARCHAR(50)")
-	private String userName;
+    @Column(name = "username", nullable = false, unique = true, length = 50)
+    private String username;
 
-	// One User -> Many Loans (current + historical)
-	@OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = false)
-	private List<Loan> loans = new ArrayList<>();
+    @Column(name = "password", nullable = false, length = 100)
+    private String password;
 
-	// ===== Getters & Setters =====
-	public Long getId() {
-		return id;
-	}
+    @Column(name = "role", nullable = false, length = 50)
+    private String role;
 
-	public String getName() {
-		return this.userName;
-	}
+    /** One user can have many books */
+    @OneToMany(
+        mappedBy = "user",
+        cascade = CascadeType.ALL,
+        orphanRemoval = false
+    )
+    private List<Book> books = new ArrayList<>();
 
-	public List<Loan> getLoans() {
-		return loans;
-	}
+    public User() {}
 
-	public void setId(Long id) {
-		this.id = id;
-	}
+    // getters and setters
 
-	public void setName(String name) {
-		this.userName = name;
-	}
+    public Long getUserId() {
+        return userId;
+    }
 
-	public void setLoans(List<Loan> loans) {
-		this.loans = loans;
-	}
+    public void setUserId(Long userId) {
+        this.userId = userId;
+    }
 
+    public String getUsername() {
+        return username;
+    }
+ 
+    public void setUsername(String username) {
+        this.username = username;
+    }
+ 
+    public String getPassword() {
+        return password;
+    }
+ 
+    public void setPassword(String password) {
+        this.password = password;
+    }
+ 
+    public String getRole() {
+        return role;
+    }
+ 
+    public void setRole(String role) {
+        this.role = role;
+    }
+
+    public List<Book> getBooks() {
+        return books;
+    }
 }

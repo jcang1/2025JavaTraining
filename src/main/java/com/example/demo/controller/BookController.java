@@ -1,73 +1,71 @@
+/*
+ * Controller. This contains the URL available for testing via API
+ */
+
 package com.example.demo.controller;
 
+import java.time.LocalDate;
 import java.util.List;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import com.example.demo.DTO.ApiResponse;
 import com.example.demo.DTO.BookDTO;
-import com.example.demo.DTO.BookDTOMasked;
-import com.example.demo.DTO.LoanDTO;
-import com.example.demo.service.LibaryService;
+import com.example.demo.services.BookService;
 
 @RestController
 @RequestMapping("/api/books")
 public class BookController {
+	private static final Logger logger = LoggerFactory.getLogger(BookController.class);
 
-    private final LibaryService libaryService;
+	private final BookService bookService;
 
-    public BookController(LibaryService libaryService) {
-        this.libaryService = libaryService;
-    }
+	public BookController(BookService bookService) {
+		this.bookService = bookService;
+	}
 
-    // GET /api/books
-    @GetMapping
-    public ResponseEntity<List<BookDTOMasked>> getBooks(@RequestParam(required = false) String title,
-                                                        @RequestParam(required = false) String author,
-                                                        @RequestParam(required = false) Boolean isAvailable) {
-        return ResponseEntity.ok(libaryService.getBooks(title, author, isAvailable));
-    }
+	// GET /api/books
+	@GetMapping("/listBook")
+	public ResponseEntity<List<BookDTO>> getBooks() {
+		logger.info("accessing /api/books/listBook");
+		return ResponseEntity.ok(bookService.getAllBooks());
+	}
 
-    @PostMapping("/addBook")
-    @ResponseStatus(HttpStatus.CREATED)
-    public ResponseEntity<BookDTO> addBook(@RequestParam String title,
-                                           @RequestParam String author) {
-        return ResponseEntity.ok(libaryService.addBook(title, author));
-    }
+	@PostMapping("/createBook")
+	public ResponseEntity<ApiResponse<BookDTO>> addBook(@RequestParam String title, @RequestParam String author,
+			@RequestParam LocalDate publishDate) {
+		logger.info("accessing /api/books/createBook");
+		return ResponseEntity.status(HttpStatus.CREATED).body(bookService.addBook(title, author, publishDate));
+	}
 
-    @DeleteMapping("/delBook")
-    @ResponseStatus(HttpStatus.ACCEPTED)
-    public ResponseEntity<String> delBook(@RequestParam String title,
-                                          @RequestParam String author) {
-        long count = libaryService.deleteBookByTitleAndAuthor(title, author);
-        if (count == 0) {
-            return ResponseEntity.status(HttpStatus.NOT_FOUND)
-                                 .body("No book found with given title and author.");
-        }
-        return ResponseEntity.ok("Deleted " + count + " record(s).");
-    }
+	@PostMapping("/readBook")
+	public ResponseEntity<ApiResponse<BookDTO>> borrowBook(@RequestParam Long bookId, @RequestParam Long userId) {
+		logger.info("accessing /api/books/readBook");
+		return ResponseEntity.status(HttpStatus.ACCEPTED).body(bookService.readBook(bookId, userId));
+	}
 
-    @PatchMapping("/updateBook")
-    @ResponseStatus(HttpStatus.ACCEPTED)
-    public ResponseEntity<BookDTO> updateBook(@RequestParam Long id,
-                                              @RequestParam String title,
-                                              @RequestParam String author) {
-        BookDTO book = libaryService.updateBook(id, title, author);
-        return ResponseEntity.ok(book);
-    }
+	@PostMapping("/unReadBook")
+	public ResponseEntity<ApiResponse<BookDTO>> returnBook(@RequestParam Long bookId) {
+		logger.info("accessing /api/books/unReadBook");
+		return ResponseEntity.status(HttpStatus.ACCEPTED).body(bookService.unReadBook(bookId));
+	}
 
-    @PostMapping("/borrowBook")
-    public ResponseEntity<LoanDTO> borrowBook(@RequestParam Long bookId,
-                                              @RequestParam Long userId) {
-        LoanDTO loan = libaryService.borrowBook(bookId, userId);
-        return ResponseEntity.status(HttpStatus.CREATED).body(loan);
-    }
+	@PatchMapping("/updateBook")
+	public ResponseEntity<ApiResponse<BookDTO>> updateBook(@RequestParam Long id, @RequestParam String title,
+			@RequestParam String author, @RequestParam LocalDate publishDate) {
+		logger.info("accessing /api/books/updateBook");
+		return ResponseEntity.status(HttpStatus.ACCEPTED).body(bookService.updateBook(id, title, author, publishDate));
+	}
 
-    @PostMapping("/returnBook")
-    public ResponseEntity<Long> returnBook(@RequestParam Long bookId,
-                                           @RequestParam Long userId) {
-        long deleted = libaryService.returnBook(bookId, userId);
-        return ResponseEntity.status(HttpStatus.CREATED).body(deleted);
-    }
+	@DeleteMapping("/delBook")
+	public ResponseEntity<ApiResponse<BookDTO>> delBook(@RequestParam Long id) {
+		logger.info("accessing /api/books/delBook");
+		return ResponseEntity.status(HttpStatus.ACCEPTED).body(bookService.valDelBook(id));
+	}
+
 }

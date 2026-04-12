@@ -1,29 +1,56 @@
+/**
+ * Added DTO to ensure the entity is not accessible from controller
+ */
 package com.example.demo.DTO;
 
-import com.example.demo.DAO.User;
-
+/**
+ * 
+ */
 public class UserDTO {
-	private Long id;
-	private String userName;
-	
+
+	private Long userId;
+
+	private String username;
+
+	private String password;
+
+	private String role;
+
 	public UserDTO() {
-		
-	}
-	
-	public Long getId() {
-		return id;
 	}
 
-	public String getName() {
-		return this.userName;
-	}
-	
-	public void setId(Long id) {
-		this.id = id;
+	// getters and setters
+
+	public Long getUserId() {
+		return userId;
 	}
 
-	public void setName(String name) {
-		this.userName = name;
+	public void setUserId(Long userId) {
+		this.userId = userId;
+	}
+
+	public String getUsername() {
+		return username;
+	}
+
+	public void setUsername(String username) {
+		this.username = username;
+	}
+
+	public String getPassword() {
+		return password;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
+	}
+
+	public String getRole() {
+		return role;
+	}
+
+	public void setRole(String role) {
+		this.role = role;
 	}
 
 }
